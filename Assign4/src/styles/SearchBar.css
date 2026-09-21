@@ -1,0 +1,133 @@
+/* SearchBar Component Styling */
+.search-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.search-form {
+  display: flex;
+  gap: 12px;
+  position: relative;
+}
+
+.search-input-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.search-icon-decor {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: var(--text-dim);
+  pointer-events: none;
+}
+
+.weather-search-input {
+  width: 100%;
+  background: var(--bg-card);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  padding: 15px 18px 15px 48px;
+  border-radius: var(--radius-full);
+  font-family: inherit;
+  font-size: 1.05rem;
+  outline: none;
+  transition: all var(--transition-smooth);
+  box-shadow: var(--shadow-sm);
+}
+
+.weather-search-input:focus {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px var(--accent-blue-glow);
+  background: var(--bg-surface);
+}
+
+.weather-search-input::placeholder {
+  color: var(--text-dim);
+}
+
+.btn-weather-search {
+  background: linear-gradient(135deg, var(--accent-blue) 0%, #0284c7 100%);
+  border: none;
+  color: #ffffff;
+  padding: 0 28px;
+  border-radius: var(--radius-full);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px var(--accent-blue-glow);
+  transition: all var(--transition-smooth);
+}
+
+.btn-weather-search:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+}
+
+.btn-weather-search:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Quick City Chips */
+.quick-cities-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.quick-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dim);
+}
+
+.city-chip {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+}
+
+.city-chip:hover:not(:disabled) {
+  background: rgba(56, 189, 248, 0.12);
+  border-color: var(--border-hover);
+  color: var(--text-main);
+  transform: translateY(-1px);
+}
+
+.city-chip.active {
+  background: var(--accent-blue);
+  color: #081220;
+  border-color: var(--accent-blue);
+  font-weight: 700;
+}
+
+@media (max-width: 540px) {
+  .search-form {
+    flex-direction: column;
+  }
+  .btn-weather-search {
+    padding: 13px;
+    justify-content: center;
+  }
+}
+

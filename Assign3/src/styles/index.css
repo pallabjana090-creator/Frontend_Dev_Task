@@ -1,0 +1,121 @@
+/* Assignment 3: Global Theme Variables & Reset */
+:root {
+  --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+
+  /* Farm Theme Palette */
+  --bg-app: #08110b;
+  --bg-surface: #0f1f15;
+  --bg-card: #14281c;
+  --bg-card-hover: #1b3526;
+  --bg-input: #0a170f;
+
+  /* Accent Colors */
+  --farm-green: #10b981;
+  --farm-green-light: #34d399;
+  --farm-green-glow: rgba(16, 185, 129, 0.25);
+
+  --farm-gold: #f59e0b;
+  --farm-gold-glow: rgba(245, 158, 11, 0.25);
+  
+  --farm-amber: #d97706;
+  --farm-danger: #ef4444;
+  --farm-danger-glow: rgba(239, 68, 68, 0.25);
+
+  --farm-cyan: #06b6d4;
+
+  /* Text Colors */
+  --text-main: #f0fdf4;
+  --text-muted: #86efac;
+  --text-subtle: #4ade80;
+  --text-dim: #94a3b8;
+
+  --border: rgba(52, 211, 153, 0.15);
+  --border-hover: rgba(52, 211, 153, 0.45);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 16px 36px -8px rgba(0, 0, 0, 0.5);
+
+  --transition-smooth: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}
+
+/* Reusable Toast Notification Banner */
+.toast-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-radius: var(--radius-md);
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: var(--shadow-sm);
+  animation: slideDown 0.3s ease;
+}
+
+.toast-banner.success {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #34d399;
+}
+
+.toast-banner.danger {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #f87171;
+}
+
+.toast-close-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

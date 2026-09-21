@@ -1,0 +1,80 @@
+/* Assignment 4: Global Theme Variables & Reset */
+:root {
+  --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+
+  /* Weather Atmosphere Palette */
+  --bg-app: #090e17;
+  --bg-surface: #101a2b;
+  --bg-card: rgba(18, 28, 48, 0.7);
+  --bg-card-hover: rgba(24, 38, 64, 0.85);
+  --bg-input: #0a1322;
+
+  /* Sky & Weather Accents */
+  --accent-blue: #38bdf8;
+  --accent-blue-hover: #0284c7;
+  --accent-blue-glow: rgba(56, 189, 248, 0.25);
+
+  --accent-sun: #fbbf24;
+  --accent-sun-glow: rgba(251, 191, 36, 0.25);
+
+  --accent-purple: #a855f7;
+  --accent-teal: #2dd4bf;
+  --accent-danger: #f87171;
+  --accent-danger-glow: rgba(248, 113, 113, 0.2);
+
+  /* Typography */
+  --text-main: #f0f9ff;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(56, 189, 248, 0.35);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 20px 40px -10px rgba(0, 0, 0, 0.55);
+
+  --transition-smooth: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-app);
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(168, 85, 247, 0.06) 0%, transparent 40%);
+  background-attachment: fixed;
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+

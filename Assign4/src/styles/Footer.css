@@ -1,0 +1,61 @@
+/* Footer Component Styling */
+.weather-footer {
+  background: rgba(16, 26, 43, 0.7);
+  border-top: 1px solid var(--border);
+  padding: 28px 20px;
+  margin-top: auto;
+}
+
+.footer-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-copy {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+.footer-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.footer-tag {
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid var(--border);
+  color: var(--accent-blue);
+  font-size: 0.78rem;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+}
+
+@media (max-width: 600px) {
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+

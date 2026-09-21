@@ -1,0 +1,95 @@
+/* Assignment 7: Global Styles & Theme Variables */
+:root {
+  --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+
+  /* Theme Colors */
+  --bg-app: #080c14;
+  --bg-surface: #0f1626;
+  --bg-card: #151e33;
+  --bg-card-hover: #1b2640;
+  --bg-input: #0b111c;
+
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --primary-glow: rgba(99, 102, 241, 0.25);
+
+  --accent-cyan: #06b6d4;
+  --accent-emerald: #10b981;
+  --accent-amber: #f59e0b;
+  --accent-rose: #f43f5e;
+
+  /* Password Strength Colors */
+  --strength-weak: #f43f5e;
+  --strength-fair: #f59e0b;
+  --strength-good: #38bdf8;
+  --strength-strong: #10b981;
+
+  /* Priority Palette */
+  --priority-high: #f43f5e;
+  --priority-high-bg: rgba(244, 63, 94, 0.15);
+  --priority-medium: #f59e0b;
+  --priority-medium-bg: rgba(245, 158, 11, 0.15);
+  --priority-low: #10b981;
+  --priority-low-bg: rgba(16, 185, 129, 0.15);
+
+  /* Status Palette */
+  --status-pending: #94a3b8;
+  --status-pending-bg: rgba(148, 163, 184, 0.12);
+  --status-progress: #38bdf8;
+  --status-progress-bg: rgba(56, 189, 248, 0.15);
+  --status-completed: #34d399;
+  --status-completed-bg: rgba(52, 211, 153, 0.15);
+
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(99, 102, 241, 0.4);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 16px 36px -8px rgba(0, 0, 0, 0.55);
+
+  --transition-smooth: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-container {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}
+

@@ -1,0 +1,129 @@
+/* Header Component Styling */
+.farm-header {
+  background: linear-gradient(180deg, rgba(16, 185, 129, 0.14) 0%, rgba(15, 31, 21, 0.95) 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 36px 24px;
+}
+
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+.header-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.farm-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: var(--farm-green-light);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  width: fit-content;
+}
+
+.header-title {
+  font-family: var(--font-heading);
+  font-size: 2.3rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-title span.accent {
+  background: linear-gradient(135deg, #34d399, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header-subtitle {
+  color: var(--text-dim);
+  font-size: 1rem;
+  max-width: 580px;
+}
+
+/* Metric Count Cards */
+.header-counts {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.count-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 14px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 125px;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth);
+}
+
+.count-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-hover);
+}
+
+.count-number {
+  font-size: 1.7rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+}
+
+.count-number.green {
+  color: var(--farm-green-light);
+}
+
+.count-number.gold {
+  color: var(--farm-gold);
+}
+
+.count-number.cyan {
+  color: var(--farm-cyan);
+}
+
+.count-label {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 1.8rem;
+  }
+  .header-counts {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .count-card {
+    flex: 1;
+    min-width: 90px;
+    padding: 10px 14px;
+  }
+}
+
